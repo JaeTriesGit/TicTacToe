@@ -12,7 +12,7 @@ const Restart = document.getElementById('Restart')
 const GameInput = document.getElementById('GameInput')
 const Stats = document.getElementById('Stats')
 
-Stats.textContent = `X has won ${Wins.x} times, O has won ${Wins.o} times!`
+Stats.textContent = `X has won ${Wins.x} times, O has won ${Wins.o} times & we've had ${Wins.tie} ties!`
 
 const Colors = {
     Active:'rgb(22, 22, 22)',
