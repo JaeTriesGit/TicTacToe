@@ -1,0 +1,65 @@
+*{
+    padding:0;margin:0;
+    font-size:50px;
+    font-family: 'Cabin', sans-serif;
+    color:white;
+}
+
+$colorpick:rgb(47, 177, 209);
+
+body{
+    background-color:rgb(34, 34, 34);
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+}
+
+#MainFrame{
+    background-color:rgb(43, 43, 43);
+    padding:10px;
+    border-radius:10px;
+    width:310px;height:310px;
+    display:flex;
+    flex-flow:wrap;
+    gap:5px;
+    box-shadow:0 5px 5px black;
+    margin-bottom:10px;
+}
+
+.Board-Piece{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    width:100px;
+    height:100px;
+    background:rgb(22, 22, 22);
+
+    &p{
+        text-align:center;
+        font-size:100vh;
+        font-weight:500;
+    }
+
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+#GameInput{
+    font-size:20px;
+}
+
+#Restart{
+    color:red;
+    font-size:40px;
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+span{
+    color:red;
+    font-size:20px;
+}
