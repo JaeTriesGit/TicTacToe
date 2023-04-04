@@ -1,8 +1,18 @@
 let Turn = 'x'
 let Won = false
+
+let Wins = {
+    x:0,
+    o:0,
+    tie:0
+}
+
 const BoardButtons = document.querySelectorAll('.Board-Piece')
 const Restart = document.getElementById('Restart')
 const GameInput = document.getElementById('GameInput')
+const Stats = document.getElementById('Stats')
+
+Stats.textContent = `X has won ${Wins.x} times, O has won ${Wins.o} times!`
 
 const Colors = {
     Active:'rgb(22, 22, 22)',
@@ -93,13 +103,16 @@ BoardButtons.forEach((Obj) => {
                     GameInput.textContent = `Player ${Turn}'s Turn!`
                 } else if (Check === true) {
                     Won = true
+                    Wins[Turn]+=1
                     GameInput.textContent = `Player ${Turn} Wins!`
                 }
                 let DoubleCheck = CheckFull()
                 if (DoubleCheck === true && Won === false) {
                     Won = true
                     GameInput.textContent = 'Oh no! Board ran out of space! Restart!'
+                    Wins.tie+=1
                 }
+                Stats.textContent = `X has won ${Wins.x} times, O has won ${Wins.o} times & we've had ${Wins.tie} ties!`
             }
         }
     })
